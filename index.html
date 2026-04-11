@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriveInsight - Download</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">DriveInsight</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="pill">Early Access Build</span>
+        <h1>Download DriveInsight</h1>
+        <p class="subtitle">
+          A simple desktop tool to understand your storage usage, find large files fast, and keep your drives clean.
+        </p>
+        <div class="actions">
+          <a class="button button-primary" href="downloads/DriveInsightSetup.exe" download>Download for Windows</a>
+          <a class="button button-secondary" href="#previews">View App Screenshots</a>
+        </div>
+        <p class="notice">Note: this is an early development build.</p>
+      </div>
+    </section>
+
+    <section class="section" id="previews">
+      <div class="container">
+        <h2>App Preview</h2>
+        <div class="cards">
+          <article class="card">
+            <img class="shot" src="images/Driveinsightdashboard.png" alt="DriveInsight largest files and smart insights view" loading="lazy" onerror="this.replaceWith(createPlaceholder('Place image at assets/screenshot-2.png'));">
+            <div class="card-body">
+              <h3>Largest Files + Insights</h3>
+              <p>Quickly identify bulky files and receive cleanup suggestions.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="shot" src="images/Driveinsightdrives.png" alt="DriveInsight drive breakdown view" loading="lazy" onerror="this.replaceWith(createPlaceholder('Place image at assets/screenshot-1.png'));">
+            <div class="card-body">
+              <h3>Drive Breakdown</h3>
+              <p>See usage percentages and folder-level space consumption at a glance.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="meta">
+          <div>
+            <strong>Windows</strong>
+            <span>Current platform</span>
+          </div>
+          <div>
+            <strong>Early Access</strong>
+            <span>Actively improving</span>
+          </div>
+          <div>
+            <strong>Free Download</strong>
+            <span>No account needed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> DriveInsight. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function createPlaceholder(text) {
+      const div = document.createElement("div");
+      div.className = "shot placeholder";
+      div.textContent = text;
+      return div;
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
