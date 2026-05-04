@@ -80,6 +80,14 @@ h1 {
 .actions {
   margin-top: 28px;
   display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.primary-action,
+.secondary-actions {
+  display: flex;
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
