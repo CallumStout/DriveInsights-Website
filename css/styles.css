@@ -120,6 +120,24 @@ h1 {
   background: #eff6ff;
 }
 
+.upgrade-note {
+  max-width: 680px;
+  margin: 24px auto 0;
+  padding: 14px 16px;
+  color: #374151;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.upgrade-note strong {
+  display: block;
+  color: #9a3412;
+  margin-bottom: 4px;
+}
+
 .section {
   padding: 24px 0 12px;
 }
