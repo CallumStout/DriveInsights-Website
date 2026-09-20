@@ -3,94 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DriveInsight - Download</title>
+  <meta name="description" content="See what's taking up space. DriveInsight is a free Windows desktop app for understanding your storage, finding large files, and making room for what matters." />
+  <meta name="theme-color" content="#fafbf9" />
+  <title>DriveInsight — A clearer picture of your storage</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="favicon.ico" />
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="topbar">
-    <div class="container">
-      <div class="brand">DriveInsight</div>
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="DriveInsight home">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="8" fill="currentColor"/><path d="M9 11h14l2 9H7l2-9Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M7 20v3h18v-3M11 16h10" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="21.5" cy="21.5" r=".8" fill="white"/></svg>
+        <span>DriveInsight</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#previews">Inside the app</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7U6WxeGMspB62zXyGixuYQYDc2W9qyP8ikpbUg26aQ3Y3mQ/viewform?usp=publish-editor" target="_blank" rel="noopener">Feedback <span aria-hidden="true">↗</span></a>
+      </nav>
+      <a class="button button-small button-outline" href="#download">Get DriveInsight <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <p><span class="pill">v1.1.1</span></p>
-        <h1>Download DriveInsight</h1>
-        <p class="subtitle">
-          A simple desktop tool to understand your storage usage, find large files fast, and keep your drives clean.
-        </p>
-        <div class="actions">
-          <div class="primary-action">
-            <a class="button button-primary" href="https://github.com/CallumStout/DriveInsight/releases/download/v1.1.1/DriveInsight-win-Setup.exe" download>Download for Windows</a>
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> A little insight. A lot more space.</p>
+      <h1 id="hero-title">Your storage.<br><span>A clearer picture.</span></h1>
+      <p class="hero-description">See what’s taking up space, find the files you’ve forgotten,<br class="desktop-break"> and make room for what matters.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/CallumStout/DriveInsight/releases/download/v1.1.1/DriveInsight-win-Setup.exe" download>
+          <svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M1 2.5 9 1.4V9H1V2.5ZM10.5 1.2 19 0v9h-8.5V1.2ZM1 10.5h8v7.6L1 17v-6.5ZM10.5 10.5H19v9l-8.5-1.2v-7.8Z"/></svg>
+          Download for Windows
+          <svg class="download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg>
+        </a>
+        <a class="text-link" href="#previews">Take a look inside <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="download-meta">Free to download <span aria-hidden="true">·</span> No account needed <span aria-hidden="true">·</span> v1.1.1</p>
+      <p class="hero-upgrade">Updating from v0.6.3 or earlier? <a href="#upgrade-note">Read the upgrade note <span aria-hidden="true">↗</span></a></p>
+    </section>
+
+    <section class="preview-section container" id="previews" aria-labelledby="preview-title">
+      <div class="section-heading">
+        <h2 id="preview-title">Less guesswork. More clarity.</h2>
+        <span class="section-label">A look inside DriveInsight</span>
+      </div>
+      <div class="preview-shell">
+        <div class="preview-toolbar">
+          <div class="preview-tabs" aria-label="App screenshots" hidden>
+            <button class="preview-tab" id="tab-dashboard" type="button" aria-controls="panel-dashboard">Overview</button>
+            <button class="preview-tab" id="tab-drives" type="button" aria-controls="panel-drives">Your drives</button>
+            <button class="preview-tab" id="tab-storage" type="button" aria-controls="panel-storage">Storage breakdown</button>
           </div>
-          <div class="secondary-actions">
-            <a class="button button-secondary" href="#previews">View App Screenshots</a>
-            <a class="button button-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSd7U6WxeGMspB62zXyGixuYQYDc2W9qyP8ikpbUg26aQ3Y3mQ/viewform?usp=publish-editor" target="_blank" rel="noopener">Report Feedback or Issue</a>
-          </div>
+          <span class="preview-label">Built for Windows</span>
         </div>
-        <div class="upgrade-note" role="note">
-          <strong>Updating from v0.6.3 or earlier?</strong>
-          Please uninstall your current DriveInsight version first, then download and install this newer release.
-        </div>
+        <figure class="preview-panel" id="panel-dashboard">
+          <div class="screenshot-wrap"><img class="screenshot" src="images/Driveinsightdashboard.png" alt="DriveInsight dashboard showing total storage capacity, largest files, and smart cleanup insights." width="1423" height="764" fetchpriority="high"></div>
+          <figcaption><span><strong>The big picture, at a glance.</strong> Your storage, largest files, and useful insights in one place.</span><span class="preview-count" aria-hidden="true">01 / 03</span></figcaption>
+        </figure>
+        <figure class="preview-panel" id="panel-drives">
+          <div class="screenshot-wrap"><img class="screenshot" src="images/Driveinsightdrives.png" alt="DriveInsight drive view showing used and available space with a folder-by-folder size breakdown." width="1423" height="741" loading="lazy"></div>
+          <figcaption><span><strong>Get to know your drives.</strong> See available space and explore the folders taking up the most room.</span><span class="preview-count" aria-hidden="true">02 / 03</span></figcaption>
+        </figure>
+        <figure class="preview-panel" id="panel-storage">
+          <div class="screenshot-wrap"><img class="screenshot" src="images/DriveInsightStoragebreakdown.png" alt="DriveInsight storage breakdown showing a nested usage chart of top-level folders and protected system space." width="1413" height="740" loading="lazy"></div>
+          <figcaption><span><strong>See where every gigabyte goes.</strong> Understand your folders and system space with a visual breakdown.</span><span class="preview-count" aria-hidden="true">03 / 03</span></figcaption>
+        </figure>
+      </div>
+      <div class="features">
+        <article class="feature"><span class="feature-number">01 <span aria-hidden="true">/</span></span><h3>Find the space hogs.</h3><p>Spot your largest files quickly, with useful insights to help you decide what to clean up.</p></article>
+        <article class="feature"><span class="feature-number">02 <span aria-hidden="true">/</span></span><h3>Understand every drive.</h3><p>Check used and available space, then take a closer look at the folders behind the numbers.</p></article>
+        <article class="feature"><span class="feature-number">03 <span aria-hidden="true">/</span></span><h3>See the whole picture.</h3><p>Turn your storage usage into a clear visual breakdown, from everyday files to system space.</p></article>
       </div>
     </section>
 
-    <section class="section" id="previews">
-      <div class="container">
-        <h2>App Preview</h2>
-        <div class="cards">
-          <article class="card">
-            <img class="shot" src="images/Driveinsightdashboard.png" alt="DriveInsight largest files and smart insights view" loading="lazy" onerror="this.replaceWith(createPlaceholder('Place image at assets/screenshot-2.png'));">
-            <div class="card-body">
-              <h3>Largest Files + Insights</h3>
-              <p>Quickly identify bulky files and receive cleanup suggestions.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img class="shot" src="images/Driveinsightdrives.png" alt="DriveInsight drive breakdown view" loading="lazy" onerror="this.replaceWith(createPlaceholder('Place image at assets/screenshot-1.png'));">
-            <div class="card-body">
-              <h3>Drive Breakdown</h3>
-              <p>See usage percentages and folder-level space consumption at a glance.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img class="shot" src="images/DriveInsightStoragebreakdown.png" alt="DriveInsight Storage Breakdown view" loading="lazy" onerror="this.replaceWith(createPlaceholder('Place image at assets/screenshot-1.png'));">
-            <div class="card-body">
-              <h3>Storage Breakdown</h3>
-              <p>Visualise top-level folders, scanned files, and protected system space in a nested usage chart.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="meta">
-          <div>
-            <strong>Windows</strong>
-            <span>Current platform</span>
-          </div>
-          <div>
-            <strong>Actively improving</strong>
-            <span>Updates common</span>
-          </div>
-          <div>
-            <strong>Free Download</strong>
-            <span>No account needed</span>
-          </div>
-        </div>
+    <section class="download-section container" id="download" aria-labelledby="download-title">
+      <div class="download-content">
+        <p class="eyebrow">A simpler way to make space</p>
+        <h2 id="download-title">Meet your drives again.</h2>
+        <p>Free for Windows. No account needed. Just a little more clarity.</p>
       </div>
+      <div class="download-action">
+        <a class="button button-primary" href="https://github.com/CallumStout/DriveInsight/releases/download/v1.1.1/DriveInsight-win-Setup.exe" download>Download DriveInsight <span aria-hidden="true">↓</span></a>
+        <span>Version 1.1.1 <span aria-hidden="true">·</span> Windows installer</span>
+      </div>
+      <aside class="upgrade-note" id="upgrade-note" aria-label="Upgrade instructions">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v2"/></svg>
+        <p><strong>Updating from v0.6.3 or earlier?</strong> Uninstall your current version first, then download and install the new release.</p>
+      </aside>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> DriveInsight. All rights reserved.</p>
-    </div>
+  <footer class="footer container">
+    <a class="footer-brand" href="#">DriveInsight</a>
+    <p>&copy; <span id="year">2026</span> DriveInsight. All rights reserved.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7U6WxeGMspB62zXyGixuYQYDc2W9qyP8ikpbUg26aQ3Y3mQ/viewform?usp=publish-editor" target="_blank" rel="noopener">Feedback &amp; issues <span aria-hidden="true">↗</span></a>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
